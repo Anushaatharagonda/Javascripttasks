@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Conditional Statements Example</h1>
+
+    <script>
+        // If Statement Example
+        var number1 = 10; // Change this value to test different numbers
+        document.write('<div class="result"><h2>If Statement</h2>');
+
+        if (number1 > 0) {
+            document.write(number1 + ' is a positive number.');
+        }
+        document.write('</div>');
+
+        // If-Else Statement Example
+        var number2 = -5; // Change this value to test different numbers
+        document.write('<div class="result"><h2>If-Else Statement</h2>');
+
+        if (number2 >= 0) {
+            document.write(number2 + ' is a non-negative number.');
+        } else {
+            document.write(number2 + ' is a negative number.');
+        }
+        document.write('</div>');
+
+        // Else-If-Else Statement Example
+        var number3 = 0; // Change this value to test different numbers
+        document.write('<div class="result"><h2>Else-If-Else Statement</h2>');
+
+        if (number3 > 0) {
+            document.write(number3 + ' is a positive number.');
+        } else if (number3 < 0) {
+            document.write(number3 + ' is a negative number.');
+        } else {
+            document.write(number3 + ' is zero.');
+        }
+        document.write('</div>');
+         // For Loop Example
+         document.write('<div class="result"><h2>For Loop Example</h2>');
+        document.write('Numbers from 1 to 5 using a for loop:<br>');
+        for (var i = 1; i <= 5; i++) {
+            document.write(i + ' ');
+        }
+        document.write('</div>');
+
+        // While Loop Example
+        document.write('<div class="result"><h2>While Loop Example</h2>');
+        document.write('Numbers from 6 to 10 using a while loop:<br>');
+        var j = 6;
+        while (j <= 10) {
+            document.write(j + ' ');
+            j++;
+        }
+        document.write('</div>');
+
+        // Do-While Loop Example
+        document.write('<div class="result"><h2>Do-While Loop Example</h2>');
+        document.write('Numbers from 11 to 15 using a do-while loop:<br>');
+        var k = 11;
+        do {
+            document.write(k + ' ');
+            k++;
+        } while (k <= 15);
+        document.write('</div>');
+    </script>
+</body>
+</html>
