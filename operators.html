@@ -1,0 +1,148 @@
+!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Operators Example</h1>
+
+    <div class="result">
+        <h2>Arithmetic Operators</h2>
+        <p id="arithmetic"></p>
+    </div>
+    
+    <div class="result">
+        <h2>Comparison Operators</h2>
+        <p id="comparison"></p>
+    </div>
+    
+    <div class="result">
+        <h2>Assigment Operators</h2>
+        <p id="assigment"></p>
+    </div>
+    <div class="result">
+        <h2>Bitwise Operators</h2>
+        <p id="bitwise"></p>
+    </div>
+
+
+    <script>
+        // Arithmetic Operators
+        var a = 10;
+        var b = 5;
+        addition = a + b;
+         subtraction = a - b;
+         multiplication = a * b;
+         division = a / b;
+         modulus = a % b;
+
+        document.write(`
+            <h2>Arithmetic Operators</h2>
+            Addition: ${addition} <br>
+            Subtraction: ${subtraction} <br>
+            Multiplication: ${multiplication} <br>
+            Division: ${division} <br>
+            Modulus: ${modulus} <br><br>
+        `);
+
+        // Comparison Operators
+        var x = 10;
+        var y = 20;
+         isEqual = x == y;
+        isNotEqual = x != y;
+         isGreater = x > y;
+         isLess = x < y;
+
+        document.write(`
+            <h2>Comparison Operators</h2>
+            Equal: ${isEqual} <br>
+            Not Equal: ${isNotEqual} <br>
+            Greater Than: ${isGreater} <br>
+            Less Than: ${isLess} <br><br>
+        `);
+
+        // Logical Operators
+        const p = true;
+        const q = false;
+         andResult = p && q;
+         orResult = p || q;
+         notResult = !p;
+
+        document.write(`
+            <h2>Logical Operators</h2>
+            AND: ${andResult} <br>
+            OR: ${orResult} <br>
+            NOT: ${notResult}
+        `);
+        // Assignment Operators
+        var z = 15;
+        var originalZ = z;
+        z += 5;  // z = z + 5
+        var additionAssignment = z;
+        z -= 3;  // z = z - 3
+        var subtractionAssignment = z;
+        z *= 2;  // z = z * 2
+        var multiplicationAssignment = z;
+        z /= 4;  // z = z / 4
+        var divisionAssignment = z;
+        z %= 3;  // z = z % 3
+        var modulusAssignment = z;
+        z **= 2; // z = z ** 2
+        var exponentiationAssignment = z;
+
+        document.write(`
+          
+                <h2>Assignment Operators</h2>
+                <p>Initial z: ${originalZ} <br>
+                After z += 5: ${additionAssignment} <br>
+                After z -= 3: ${subtractionAssignment} <br>
+                After z *= 2: ${multiplicationAssignment} <br>
+                After z /= 4: ${divisionAssignment} <br>
+                After z %= 3: ${modulusAssignment} <br>
+                After z **= 2: ${exponentiationAssignment}</p>
+           
+        `);
+
+        // Bitwise Operators
+        var m = 5;   
+        var n = 3;
+        var bitwiseAnd = m & n;  
+        var bitwiseOr = m | n;   
+        var bitwiseXor = m ^ n;  
+        var bitwiseNot = ~m;     
+        var bitwiseLeftShift = m << 1; 
+        var bitwiseRightShift = m >> 1; 
+        var bitwiseUnsignedRightShift = m >>> 1; 
+
+        document.write(`
+            
+                <h2>Bitwise Operators</h2>
+                <p>m = ${m} (binary: ${m.toString(2)})<br>
+                n = ${n} (binary: ${n.toString(2)})<br>
+                m & n = ${bitwiseAnd} (binary: ${bitwiseAnd.toString(2)})<br>
+                m | n = ${bitwiseOr} (binary: ${bitwiseOr.toString(2)})<br>
+                m ^ n = ${bitwiseXor} (binary: ${bitwiseXor.toString(2)})<br>
+                ~m = ${bitwiseNot} (binary: ${bitwiseNot.toString(2)})<br>
+                m << 1 = ${bitwiseLeftShift} (binary: ${bitwiseLeftShift.toString(2)})<br>
+                m >> 1 = ${bitwiseRightShift} (binary: ${bitwiseRightShift.toString(2)})<br>
+                m >>> 1 = ${bitwiseUnsignedRightShift} (binary: ${bitwiseUnsignedRightShift.toString(2)})
+                </p>
+           
+        `);
+    </script>
+</body>
+</html>
