@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destruturing</title>
+</head>
+<body>
+    <script>
+        values=[19,67,76];
+        [a,b,c]=values;
+        document.write(values);
+    </script>
+    <h1>Array Destruturing</h1>
+    <script>
+        let arr=["anusha","shjnhb"];
+        let[firstname, surname]=arr;
+        document.write(firstname);
+        document.write(surname);
+    </script>
+    <h1>objects</h1>
+    <script>
+        values={email:"amnsjsm jhd sh@gmail.com",age: 32};
+        document.write(values.email);
+        const{email,age}=value;
+        document.write(email,age);
+    </script>
+        <script>
+         one=[12,2223,32];
+        [d,e]=one;
+        document.write(a,c);
+    </script>
+    <script>
+        let user={};
+[user.name, user.surname]="anusha hgbjh".split(' ');
+document.write(user.name);
+document.write(surname);
+    </script>                     
+    <h1>Rest opertor</h1>
+
+    <script>
+        const array=(...arr)=>document.write(arr);
+        array(18,38,89,76,98,65);
+        let[name1,name2]=["Anhj","kjn","ngjjhjh","ghubj","gujbjbn","jhehd","jhjb"];
+        document.write(name1);
+        document.write(name2);
+        let[one,two,three, ...rest]=["Anhj","kjn","ngjjhjh","ghubj","gujbjbn","jhehd","jhjb"];
+        document.write(rest[1]);
+        document.write(rest.length);
+        
+    </script>
+</body>
+</html>

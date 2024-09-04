@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>form 1</h1>
+    <script>
+        function printvalue(){
+            var name=document.form1.name.value;
+            alert(name);
+        }
+    </script>
+    <form name="form1">Enter name:
+<input type="text" name="name">
+<input type="button" onclick="printvalue()" value="print name">
+    </form>
+    <h2>get id method</h2>
+    <form>
+enter number:
+<input type="text" id="number" name="number">
+<br>
+<input type="button" value="cube" onclick="getcube()">
+    </form>
+    <script>
+        function getcube(){
+            var number=document.getElementById("gender");
+            alert(allgenders.length);
+        }
+    </script>
+    <form>
+        male:
+        <input type="radio" name="gender" value="male">
+        female:
+        <input type="radio" name="gender" value="female">
+        <input type="button" onclick="totalelements()" value="Total genders">
+    </form>
+    <h2>tag name</h2>
+    <script>
+        function countpara(){
+            var tatalpara=document.getElementsByTagName("p");
+            alert(tatalpara.length);
+        }
+    </script>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <p>this a paragraph</p>
+    <button onclick="countpara" >count paragraph</button>
+    
+    <h1>Form Validation</h1>
+    <form name="myform" method="post" action="" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.forms["myform"]["username"].value;
+            const email = document.forms["myform"]["email"].value;
+            const password = document.forms["myform"]["password"].value;
+
+            if (username === "") {
+                alert("Username must be filled out");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            // If everything is correct
+            return true;
+        }
+
+</script>
+</body>
+</html>

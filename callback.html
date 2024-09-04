@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1>callback</h1>
+    <script>
+        function mainfunction(callback){
+
+        
+        document.write("performing operation");
+        setTimeout(function(){
+
+            callback("operation complete");
+        }, 1000);
+    
+    }
+    //define callback function
+    function callbackfunction(result){
+        document.write("Result:"+ result);
+
+    }
+    mainfunction(callbackfunction);
+    </script>
+</body>
+</html>

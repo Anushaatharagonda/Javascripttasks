@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops Information</title>
+</head>
+<body>
+    <h1>prototype property</h1>
+    <script>
+    function Person(name,yearOfBirth){
+        this.name=name;
+        this.yearOfBirth=yearOfBirth;
+    }
+    Person.prototype.calculateAge=function(){
+        document.write('the current age is :'+(2024-this.yearOfBirth));
+    }
+   document.write(Person.prototype);
+   let person1=new Person('Anu',1999);
+   document.write(person1);
+   let person2=new Person('shss',1998);
+   document.write(person2);
+  person1.calculateAge();
+  person2.calculateAge();
+
+    </script>
+    <h1>
+        Obect Literal
+    </h1>
+    <script>
+        let person={
+            first_name:"Anu"
+            last_name:"jathara",
+
+            //method
+            getfunction: function(){
+                return('the name of the person is')
+            }
+
+        }
+    </script>
+</body>
+</html>

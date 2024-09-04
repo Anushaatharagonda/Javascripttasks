@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <h1>window.alert</h1>
+    <script>
+        function one(){
+            alert("hello ");
+        }
+        one();
+    </script>
+    <h2>conform</h2>
+    <script>
+        function two(){
+            var v=confirm("check again");
+            if(v==true){
+                alert("ok");
+            }else{
+                alert("cancel");
+            }
+        }
+        two();
+    </script>
+    <h2>prompt</h2>
+    <script>
+        function three(){
+            var i=prompt("enter your name");
+            alert("Iam :"+i);
+        }
+        three();
+    </script>
+    <h2>open</h2>
+    <script>
+        function four(){
+            open("")
+        }
+        four();
+    </script>
+    <h2>settimeout()</h2>
+    <script>
+        function five(){
+            setTimeout(function(){
+                alert("welcome to session ");
+            },200);
+        }
+        five();
+    </script>
+    <h2>navigator</h2>
+    <script>
+        document.write(navigator.appCodeName);
+        document.writeln(navigator.appName);
+
+        document.writeln(navigator.appVersion);
+        document.writeln(navigator.cookieEnabled);
+        document.write(navigator.language);
+        document.writeln(navigator.userAgent);
+
+        document.writeln(navigator.platform);
+
+        document.writeln(navigator.onLine);
+
+    </script>
+    <h2>screen object</h2>
+    <script>
+        document.write(screen.width);
+        document.write(screen.height);
+        document.write(screen.availWidth);
+        document.write(screen.availHeight);
+        document.write(screen.colorDepth);
+        document.write(screen.pixelDepth);
+    </script>
+   
+
+</body>
+</html>
