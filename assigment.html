@@ -287,6 +287,28 @@ decreasingTriangle(5);
     // Display the result
     document.getElementById('fetechresult').textContent = `Are "${string1}" and "${string2}" anagrams? ${fetechresult}`;
 </script>
+<h2>Reverse a String</h2>
+<p id="getResult"></p>
 
+<script>
+    function reverseString(str) {
+        let reversed = ''; // Initialize an empty string to store the reversed string
+
+        
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversed += str[i]; 
+        }
+
+        return reversed; // Return the reversed string
+    }
+
+    const inputString = 'Hello';
+
+    // Get the reversed string
+    const reversedString = reverseString(inputString);
+
+    // Display the result
+    document.getElementById('getResult').textContent = `Input: ${inputString} -> Output: ${reversedString}`;
+</script>
 </body>
 </html>
