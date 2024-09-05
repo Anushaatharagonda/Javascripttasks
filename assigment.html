@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingment</title>
+    <script type="text/JavaScript" src="assingment.js"></script>
+</head>
+<body>
+    <h1>Question 1</h1>
+    <p>
+         var str1 = 'Today is';<br>
+         var str2 = '      a beautiful day     '<br>
+         var str3 = ' In Hawaii.     '<br>
+         Result = 'Today is a beautiful day In Hawaii.'<br>
+         Use the str1, str2, str3 variables to create the Result string. Keep the extra spaces, lowercase and uppercase letters in mind.
+    </p>
+    <script>
+         var str1 = 'Today is';
+         var str2 = '      a beautiful day     '
+         var str3 = ' In Hawaii.     '
+          var trimmedStr2=str2.trim();
+          var trimmedStr3=str3.trim();
+          var result=str1+' '+trimmedStr2+' '+trimmedStr3;
+          document.write(result);
+    </script>
+    <h1>Question 2:</h1> 
+   <p>  var enteredAlphabet = 'd' or "D" <br>
+     Write a program to check vowel, consonant or non-alphabet using switch case. Change value of enteredAlphabet and check if your code works fine.
+</p>
+<script>
+    var enteredAlphabet= 'd';
+    function checkCharacter(enteredAlphabet){
+        switch(enteredAlphabet.toLowerCase()){
+            case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    document.write(enteredAlphabet+ " it is a vowel.");
+                break;
+                case 'b':
+        case 'c':
+        case 'd':
+        case 'f':
+        case 'g':
+        case 'h':
+        case 'j':
+        case 'k':
+        case 'l':
+        case 'm':
+        case 'n':
+        case 'p':
+        case 'q':
+        case 'r':
+        case 's':
+        case 't':
+        case 'v':
+        case 'w':
+        case 'x':
+        case 'y':
+        case 'z':
+             document.write(enteredAlphabet+ " it is a consonant.");
+             break;
+        default:
+            document.write(enteredAlphabet + " is a non-alphabet character.");
+
+        }
+    }
+    checkCharacter(enteredAlphabet);
+</script>
+<h2>Question 3</h2>
+
+<script>
+    function performCalculation(num1, num2, operator) {
+    let result;
+    const resultElement = document.getElementById('result');
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                resultElement.textContent = "Error: Invalid number input.";
+                return;
+            }
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            // Check for division by zero
+            if (num2 === 0) {
+                document.write("Error: Division by zero is not allowed.");
+                return;
+            }
+            result = num1 / num2;
+            break;
+        default:
+            document.write("Error: Invalid operator. Please use +, -, *, or /.");
+            return;
+    }
+
+    document.write(`Result: ${num1} ${operator} ${num2} = ${result}`);
+    }
+
+// Input from the user
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let operator = prompt("Enter the operator (+, -, *, /):");
+
+ 
+            // Perform calculation
+            performCalculation(num1, num2, operator);
+
+</script>
+<h2>Question 4</h2>
+
+<p id="result"></p>
+
+<script>
+    function checkTriangleType(a, b, c) {
+        const resultElement = document.getElementById('result');
+
+        // Validate if the sides form a proper triangle
+        if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) {
+            resultElement.textContent = "Error: The given sides do not form a valid triangle.";
+            return;
+        }
+
+        // Determine the type of triangle
+        if (a === b && b === c) {
+            resultElement.textContent = "The triangle is an Equilateral triangle.";
+        } else if (a === b || b === c || a === c) {
+            resultElement.textContent = "The triangle is an Isosceles triangle.";
+        } else {
+            resultElement.textContent = "The triangle is a Scalene triangle.";
+        }
+    }
+
+    // Input from the user
+    let side1 = parseFloat(prompt("Enter the first side of the triangle:"));
+    let side2 = parseFloat(prompt("Enter the second side of the triangle:"));
+    let side3 = parseFloat(prompt("Enter the third side of the triangle:"));
+
+    // Ensure that inputs are numbers and call the function
+    if (!isNaN(side1) && !isNaN(side2) && !isNaN(side3)) {
+        checkTriangleType(side1, side2, side3);
+    } else {
+        document.getElementById('result').textContent = "Error: Please enter valid numbers.";
+    }
+</script>
+
+
+<h2>Question 5</h2>
+<h3>Electricity Bill Calculator</h3>
+    <p id="resultt"></p>
+
+    <script>
+        function calculateElectricityBill(units) {
+            let totalBill = 0;
+            const resultElementt = document.getElementById('resultt');
+
+            if (units <= 0) {
+                resultElementt.textContent = "Error: Units should be a positive number.";
+                return;
+            }
+
+            // Calculate the bill based on the number of units
+            if (units <= 50) {
+                totalBill = units * 0.50;
+            } else if (units <= 150) {
+                totalBill = (50 * 0.50) + ((units - 50) * 0.75);
+            } else if (units <= 250) {
+                totalBill = (50 * 0.50) + (100 * 0.75) + ((units - 150) * 1.20);
+            } else {
+                totalBill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + ((units - 250) * 1.50);
+            }
+
+            // Apply a surcharge of 20%
+            totalBill = totalBill + (totalBill * 0.20);
+
+            // Display the final bill amount
+            resultElementt.textContent = `The total electricity bill is INR ${totalBill.toFixed(2)}`;
+        }
+
+        // Input from the user
+        let units = parseFloat(prompt("Enter the number of electricity units:"));
+
+        // Calculate and display the bill
+        calculateElectricityBill(units);
+    </script>
+    <h2>Question 6</h2>
+   <h3>Search Elements in Array </h3>
+    <p id="getresults"></p>
+    <script>
+        function findElementPositions(array, searchElem) {
+            let positions = [];
+            
+            // Iterate through the array to find all positions of searchElem
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === searchElem) {
+                    positions.push(i);
+                }
+            }
+
+            // Return result based on the number of positions found
+            if (positions.length === 0) {
+                return -1;
+            } else if (positions.length === 1) {
+                return positions[0];
+            } else {
+                return positions;
+            }
+        }
+
+        // Example input and search
+        let array = [1, 2, 3, 4, 5, 1, 3];
+        let searchElem1 = 4;
+        let searchElem2 = 1;
+        let searchElem3 = 7;
+
+        // Display results
+        document.getElementById('getresults').textContent = 
+           `Searching for ${searchElem1}: ${findElementPositions(array, searchElem1)}\n` + 
+            `Searching for ${searchElem2}: ${findElementPositions(array, searchElem2)}\n` +
+            `Searching for ${searchElem3}: ${findElementPositions(array, searchElem3)}`;
+    </script>
+<h2>Question 7</h2>
+<h2>Pattern Printer</h2>
+
+<script>
+    function decreasingTriangle(n) {
+  for (let i = n; i >= 1; i--) {
+    let row = "";
+    for (let j = i; j >= 1; j--) {
+      row += j + " ";
+    }
+    document.write(row);
+  }
+}
+
+decreasingTriangle(5);
+</script>
+
+<h2>Array Sorter</h2>
+<p id="getresult"></p>
+
+<script>
+    function sortArrayAscending(arr) {
+        // Sort the array in ascending order
+        arr.sort((a, b) => a - b);
+        return arr;
+    }
+
+    // Example input
+    let arrayy = [3, 2, 1, 4, 5, 45];
+    
+    // Sort the array
+    let sortedArray = sortArrayAscending(arrayy);
+
+    // Display the result
+    document.getElementById('getresult').textContent = `Sorted array: [${sortedArray}]`;
+</script>
+<h2>Anagram Checker</h2>
+<p id="fetechresult"></p>
+
+<script>
+    function areAnagrams(str1, str2) {
+        // Normalize strings: remove whitespace and convert to lowercase
+        str1 = str1.toLowerCase().replace(/\s+/g, '');
+        str2 = str2.toLowerCase().replace(/\s+/g, '');
+
+        // Sort and compare
+        return str1.split('').sort().join('') === str2.split('').sort().join('');
+    }
+
+    // Example inputs
+    const string1 = 'LISTEN';
+    const string2 = 'SILENT';
+
+    // Check if the strings are anagrams
+    const fetechesult = areAnagrams(string1, string2);
+
+    // Display the result
+    document.getElementById('fetechresult').textContent = `Are "${string1}" and "${string2}" anagrams? ${fetechresult}`;
+</script>
+
+</body>
+</html>
